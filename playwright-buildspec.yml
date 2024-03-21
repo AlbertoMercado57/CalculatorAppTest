@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - npm install -D @playwright/test@latest
+  pre_build:
+    commands:
+      - npm ci
+      - npm install
+      - npx playwright install --with-deps
+  build:
+    commands:
+      - npx playwright test

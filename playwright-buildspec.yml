@@ -13,3 +13,8 @@ phases:
   build:
     commands:
       - npx playwright test
+  artifacts:
+  type: zip
+  paths:
+    - './build/**/*'
+    - './cicd/**/*'

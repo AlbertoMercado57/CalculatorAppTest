@@ -39,7 +39,7 @@ test('calculate the multiplication of two numbers', async ({page}) => {
 test('calculate the divison of two numbers', async ({page}) => {
   const goToCalculatorApp = new CalculatorPage(page);
   goToCalculatorApp.firstInput(30)
-  goToCalculatorApp.operator.arguments('%')
+  goToCalculatorApp.operator.arguments('/')
   goToCalculatorApp.secondInput(2)
   goToCalculatorApp.calculateButton()
   expect (goToCalculatorApp.calculatorResult).toBe('15');
